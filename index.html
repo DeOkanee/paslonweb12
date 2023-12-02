@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>PASLON 1 & 2 </title>
@@ -67,7 +62,7 @@
 									<a href="paslon1.html" class="image fit"><img src="images//PASLON 1-01.jpg" alt="" /></a>
 									
 									<ul class="actions special">
-										<li><a href="https://chat.whatsapp.com/JjSM2bAmbrE1lf1M9uLkZs" class="button">PILIH & JOIN GRUP WA</a></li>
+										<li><a href="https://chat.whatsapp.com/JjSM2bAmbrE1lf1M9uLkZs" id="button1" class="button">PILIH & JOIN GRUP WA</a></li>
 									</ul>
 								</article>
 								<article>
@@ -79,7 +74,7 @@
 									<a href="paslon2.html" class="image fit"><img src="images/PASLON 2-01.jpg" alt="" /></a>
 									
 									<ul class="actions special">
-										<li><a href="https://chat.whatsapp.com/HqDS4yXJi0VA6jfAaERS18" class="button">PILIH & JOIN GRUP WA</a></li>
+										<li><a href="https://chat.whatsapp.com/HqDS4yXJi0VA6jfAaERS18" id="button2" class="button">PILIH & JOIN GRUP WA</a></li>
 									</ul>
 								</article>
 								
@@ -113,7 +108,24 @@
 
 		1	`
 			</div>
-
+			<script>
+				function disableButtons() {
+					document.getElementById('button1').disabled = true;
+					document.getElementById('button2').disabled = true;
+					alert('Tautan dinonaktifkan.');
+				}
+			
+				document.getElementById('button1').addEventListener('click', function (event) {
+					event.preventDefault();
+					disableButtons();
+				});
+			
+				document.getElementById('button2').addEventListener('click', function (event) {
+					event.preventDefault();
+					disableButtons();
+				});
+			</script>
+			
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
